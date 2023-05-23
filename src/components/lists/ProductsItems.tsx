@@ -2,6 +2,7 @@ import { Product } from "@/model/Product"
 import { IconShoppingCart } from "@tabler/icons-react"
 import Image from "next/image"
 import Coin from "@/utilities/Coin"
+
 interface ProductItemProps{
     product: Product
     addBuy: (product: Product) => void
@@ -21,7 +22,7 @@ export default function ProductsItems(props: ProductItemProps){
             <div className="flex flex-col p-2 gap-3">
                 <div className="flex justify-between items-center">
                     <div className="text-2xl">{product.name}</div>
-                    <div className="text-green-600 font-bold">{Coin.FormatCoin(product.price)}</div>
+                    <div className="text-green-600 font-bold">{Coin.formatCoin(product.price)}</div>
                 </div>
                 <div>
                     <div className="">{product.describe}</div>

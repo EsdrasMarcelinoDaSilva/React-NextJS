@@ -1,5 +1,7 @@
 import ItemCart from "@/model/ItemCart"
 import Coin from "@/utilities/Coin"
+
+
 export default function ShoppingCart(props: ItemCart){
 
     return  (
@@ -15,7 +17,7 @@ export default function ShoppingCart(props: ItemCart){
                 {props.product.name}
             </span>
             <span className="pr-5">
-                {Coin.FormatCoin(props.product.price * props.amount)}
+                {Coin.formatCoin(props.product.price * props.amount)}
                 {/* {props.product.price * props.amount}  */}
             </span>
         </div>

@@ -18,7 +18,7 @@ export default function Cart(props:CartProps){
             <div className="flex justify-between bg-zinc-800 text-3xl 
             text-yellow-500 p-3">
                 <span>Cart</span>
-                <span>{Coin.FormatCoin(total)}</span>
+                <span>{Coin.formatCoin(total)}</span>
             </div>
             <div className="flex flex-wrap gap-5 p-2 text-zinc-600">
                 {props.items.length === 0 ? (
@@ -30,7 +30,6 @@ export default function Cart(props:CartProps){
                         )
                     })
                 )}
-                {}
             </div>
         </div>
     )

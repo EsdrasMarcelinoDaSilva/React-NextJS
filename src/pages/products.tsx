@@ -7,6 +7,7 @@ import Cart from "@/components/lists/Cart"
 
 
 export default function ProductsPage(){
+    
     const [items, setItems] = useState<ItemCart[]>([])
 
     function addProduct(product: Product){                                    //<----item setado---->
@@ -20,10 +21,12 @@ export default function ProductsPage(){
     }
 
     return (
-        <div className={`flex flex-col gap-2 p-2
-            justify-center items-center`}>
-            <Cart items={items}/>
-            <Promotions products={products} addBuy={addProduct}/>
+        <div className="">
+            <div className={`flex flex-wrap flex-col gap-2 p-2
+                justify-center items-center`}>
+                <Cart items={items}/>
+                <Promotions products={products} addBuy={addProduct}/>
+            </div>
         </div>
     )
 }
