@@ -17,4 +17,6 @@ const [processing, setProcessing] = useState<boolean>(false)
     }
 }
 //toda vez que meu hook é chamado essas funções são recriadas!
-//por isso o use correto delas seria com useCallback
+//por isso o use correto delas seria com useCallback ou seja o useCallback
+//vai armazenar minhas funções e não deixara ela ser recriada a cada chamada
+//do meu hook. 
