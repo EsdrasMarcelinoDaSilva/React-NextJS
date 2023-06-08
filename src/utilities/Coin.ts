@@ -7,6 +7,6 @@ export default class Coin{
     }
 }
 
-// // Coin.formatCoin(1)
+// Coin.formatCoin(1)
 // const coinFormat = new Coin()
 // coinFormat.formatCoin

@@ -1,14 +1,15 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 
 export default function useProcessing(){
 const [processing, setProcessing] = useState<boolean>(false)
 
-    function startProcessing(){ //função deveria ser criada com useCallback
+    const startProcessing = useCallback(() => { //função deveria ser criada com useCallback
         setProcessing(true)
-    }
-    function endProcessing(){ //função deveria ser criada com useCallback
+    },[])
+
+    const endProcessing = useCallback(() =>{ //função deveria ser criada com useCallback <-- dia 30/05
         setProcessing(false)
-    }
+    },[])
 
     return {
         processing,
@@ -20,3 +21,5 @@ const [processing, setProcessing] = useState<boolean>(false)
 //por isso o use correto delas seria com useCallback ou seja o useCallback
 //vai armazenar minhas funções e não deixara ela ser recriada a cada chamada
 //do meu hook. 
+
+//dia 02/06 atualizei as funções para serem criadas com useCallback
